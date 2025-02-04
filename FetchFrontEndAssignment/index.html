@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Dog Shelter Search</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div id="login-section">
+    <h1>Welcome To The Dog Shelter Search!</h1>
+    <form id="login-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div id="search-section" style="display: none;">
+    <header>
+      <h2>Find Your Perfect Dog</h2>
+      <button id="logout-btn">Logout</button>
+    </header>
+
+    <h3>Please provide search details to better match your needs!</h3>
+    
+    <div class="filters">
+      <button id="generate-match" disabled>Generate Match</button>
+      <select id="breed-filter">
+        <option value="">Select Breed</option>
+      </select>
+      <input type="text" id="location-filter" placeholder="ZIP Code">
+      <div class="age-filter">
+        <input type="number" id="min-age" placeholder="Min Age" min="0">
+        <input type="number" id="max-age" placeholder="Max Age" min="0">
+      </div>
+      <select id="sort-order">
+        <option value="asc">A-Z</option>
+        <option value="desc">Z-A</option>
+      </select>
+    </div>
+
+    <div id="dogs-grid"></div>
+    
+    <div class="pagination">
+      <button id="prev-page">Previous</button>
+      <span id="page-info"></span>
+      <button id="next-page">Next</button>
+    </div>
+
+    <div id="favorites-section">
+      <h2>Your Favorited Dogs</h2>
+      <div id="favorites-grid"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
